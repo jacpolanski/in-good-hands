@@ -1,0 +1,7 @@
+.home-log {
+  text-align: center;
+
+  @include tablet-min {
+    text-align: right;
+  }
+}

@@ -3,12 +3,12 @@ import HomeAbout from "./home/HomeAbout";
 import HomeReason from "./home/HomeReason";
 import HomeOrganizations from "./home/HomeOrganizations";
 import HomeContact from "./home/HomeContact";
-import HomeNavHeader from "./home/HomeNavHeader";
+import HomeHeader from "./home/HomeHeader";
 
-function HomeMain(props) {
+function HomeMain() {
   return (
     <div>
-      <HomeNavHeader />
+      <HomeHeader />
       <HomeReason />
       <HomeAbout />
       <HomeOrganizations />

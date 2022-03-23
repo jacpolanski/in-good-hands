@@ -1,7 +1,11 @@
 import React from "react";
 
-function HomeContact(props) {
-  return <div>HomeContact</div>;
+function HomeContact() {
+  return (
+    <div id="contact" className="element">
+      HomeContact
+    </div>
+  );
 }
 
 export default HomeContact;

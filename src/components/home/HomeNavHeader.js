@@ -1,14 +1,14 @@
 import React from "react";
-import HomeLog from "./header/HomeLog";
-import HomeNav from "./header/HomeNav";
-import HomeHeader from "./header/HomeHeader";
+import HomeLog from "./HomeLog";
+import HomeNav from "./HomeNav";
 
-function HomeNavHeader(props) {
+function HomeNavHeader() {
   return (
     <>
-      <HomeLog />
-      <HomeNav />
-      <HomeHeader />
+      <div className="container">
+        <HomeLog />
+        <HomeNav />
+      </div>
     </>
   );
 }

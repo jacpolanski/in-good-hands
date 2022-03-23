@@ -1,5 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: $color-dark;
   font-family: $font-base;
   font-weight: 400;
+
+  .container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+
+  #about,
+  #contact,
+  #header,
+  #organizations,
+  #reason {
+    height: 100vh;
+  }
 }

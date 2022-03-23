@@ -1,7 +1,11 @@
 import React from "react";
 
-function HomeOrganizations(props) {
-  return <div>HomeOrganizations</div>;
+function HomeOrganizations() {
+  return (
+    <div id="organizations" className="element">
+      HomeOrganizations
+    </div>
+  );
 }
 
 export default HomeOrganizations;

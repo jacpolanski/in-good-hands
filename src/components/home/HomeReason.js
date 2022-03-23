@@ -1,7 +1,11 @@
 import React from "react";
 
-function HomeReason(props) {
-  return <div>HomeReason</div>;
+function HomeReason() {
+  return (
+    <div id="reason" className="element">
+      HomeReason
+    </div>
+  );
 }
 
 export default HomeReason;

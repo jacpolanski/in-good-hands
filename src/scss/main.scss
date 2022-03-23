@@ -1,6 +1,9 @@
 //Reset / Normalize / Flavour/
 @import "./global/reset";
 
+//Variables
+@import "./settings/breakpoints";
+
 //Fonts
 @import "./settings/fonts";
 
@@ -9,4 +12,9 @@
 
 //Global settings
 @import "./global/generic";
+@import "./global/media_query";
 @import "./global/buttons";
+
+
+//Components
+@import "./components/home";
