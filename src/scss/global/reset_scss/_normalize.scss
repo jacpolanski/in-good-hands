@@ -19,9 +19,9 @@ html {
     // reset box model
     box-sizing: border-box;
     // set transparent tap highlight for iOS
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
- }
+}
 
 /**
  * HTML5 display definitions
@@ -114,7 +114,8 @@ strong {
  */
 
 dfn, // 1
-i, em { // 2
+i, em {
+  // 2
   font-style: italic;
 }
 
