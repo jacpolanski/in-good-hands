@@ -29,6 +29,14 @@
   margin: .622em;
   background-color: rgba(240, 241, 241, 0.5);
 
+  &:hover {
+    background-color: rgba(240, 241, 241, .65);
+
+    @include notebook {
+      background-color: rgba(240, 241, 241, .5);
+    }
+  }
+
   @include notebook {
     background-color: $no-color;
   }
