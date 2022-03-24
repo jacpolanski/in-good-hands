@@ -8,11 +8,28 @@
 }
 
 .button-small {
+  color: $color-gray;
   @extend .button;
   font-size: $main-font-size - 4;
   border: 0.75px solid transparent;
 
   &:hover {
     border: 0.75px solid $color-yellow;
+  }
+}
+
+.button-big {
+  @extend .button;
+  font-weight: 300;
+  font-size: $bigger-font-size;
+  text-transform: uppercase;
+  border: 0.75px solid $color-dark;
+  width: 310px;
+  height: 120px;
+  margin: .622em;
+  background-color: rgba(240, 241, 241, 0.5);
+
+  @include notebook {
+    background-color: $no-color;
   }
 }

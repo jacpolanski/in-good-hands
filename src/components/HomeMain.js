@@ -7,14 +7,13 @@ import HomeHeader from "./home/HomeHeader";
 
 function HomeMain() {
   return (
-    <div>
-      <div className="header-image" />
+    <main>
       <HomeHeader />
       <HomeReason />
       <HomeAbout />
       <HomeOrganizations />
       <HomeContact />
-    </div>
+    </main>
   );
 }
 

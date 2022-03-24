@@ -5,9 +5,12 @@
 }
 
 body {
+  overflow-x: hidden;
+
   color: $color-dark;
   font-family: $font-base;
   font-weight: 400;
+  font-size: $main-font-size;
 
   a {
     text-decoration: none;
@@ -21,9 +24,7 @@ body {
 
   #about,
   #contact,
-  #header,
-  #organizations,
-  #reason {
+  #organizations {
     height: 100vh;
   }
 }
