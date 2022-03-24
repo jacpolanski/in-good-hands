@@ -23,11 +23,12 @@
   .nav-links {
     text-decoration: none;
     padding: 0.5rem 1rem;
-  }
+    border: 0.75px solid transparent;
 
-  .nav-links:hover {
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
+    &:hover {
+      border: 0.75px solid $color-dark;
+      transition: all 0.2s ease-out;
+    }
   }
 
   .fa-bars {
@@ -65,7 +66,7 @@
     }
 
     .nav-links:hover {
-      color: orange
+      color: orange;
     }
 
     .menu-icon {

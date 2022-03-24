@@ -1,2 +1,22 @@
 @import "./home/home-log";
 @import "./home/home-nav";
+
+.header-image {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $color-light url("../../assets/Home-Hero-Image.jpg") no-repeat (80% 0%) / cover;
+  z-index: -100;
+
+  @include tablet-min {
+    width: 75vw;
+    background-position: right;
+  }
+
+  @include notebook {
+    width: 50vw;
+    background-position: right;
+  }
+}

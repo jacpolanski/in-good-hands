@@ -8,6 +8,7 @@ import HomeHeader from "./home/HomeHeader";
 function HomeMain() {
   return (
     <div>
+      <div className="header-image" />
       <HomeHeader />
       <HomeReason />
       <HomeAbout />

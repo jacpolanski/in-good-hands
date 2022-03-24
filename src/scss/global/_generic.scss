@@ -9,6 +9,11 @@ body {
   font-family: $font-base;
   font-weight: 400;
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .container {
     max-width: $desktop-width;
     margin: 0 auto;

@@ -10,4 +10,9 @@
 .button-small {
   @extend .button;
   font-size: $main-font-size - 4;
+  border: 0.75px solid transparent;
+
+  &:hover {
+    border: 0.75px solid $color-yellow;
+  }
 }

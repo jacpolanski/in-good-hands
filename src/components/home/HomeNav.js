@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { Link as RoutLink } from "react-router-dom";
+
 function HomeNav() {
   const [click, setClick] = useState(false);
 
@@ -15,17 +17,9 @@ function HomeNav() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link
-                activeClass="active"
-                className="nav-links"
-                to="header"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMobileMenu}
-              >
+              <RoutLink to="/" className="nav-links">
                 Start
-              </Link>
+              </RoutLink>
             </li>
             <li className="nav-item">
               <Link
