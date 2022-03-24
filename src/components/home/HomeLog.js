@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function HomeLog() {
   return (
     <div className="home-log">
-      <button className="button-small">
-        <Link to="/logowanie">Zaloguj</Link>
-      </button>
-      <button className="button-small">
-        <Link to="/rejestracja">Załóż konto</Link>
-      </button>
+      <Link to="/logowanie">
+        <button className="button-small">Zaloguj</button>
+      </Link>
+      <Link to="/rejestracja">
+        <button className="button-small">Załóż konto</button>
+      </Link>
     </div>
   );
 }
