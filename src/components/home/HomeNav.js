@@ -17,7 +17,7 @@ function HomeNav() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <RoutLink to="/" className="nav-links">
+              <RoutLink to="/" className="nav-links" onClick={closeMobileMenu}>
                 Start
               </RoutLink>
             </li>
