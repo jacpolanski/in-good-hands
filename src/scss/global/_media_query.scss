@@ -11,8 +11,14 @@
 }
 
 @mixin tablet-max {
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     @content;
+  }
+}
+
+@mixin max-tablet {
+  @media (max-width: $tablet-width) {
+    @content
   }
 }
 

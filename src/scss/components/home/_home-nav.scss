@@ -39,7 +39,7 @@
     display: none;
   }
 
-  @include tablet-max {
+  @include max-tablet{
     .nav-menu {
       display: flex;
       flex-direction: column;

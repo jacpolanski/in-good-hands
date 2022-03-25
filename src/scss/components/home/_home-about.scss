@@ -6,14 +6,67 @@
   height: 100vh;
   background-color: $color-light;
 
-  .about-text {
-height: 50%;
+  @include notebook {
+    flex-direction: row;
+  }
 
+  .about-text {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include notebook {
+      height: 100%;
+      width: 50%;
+    }
+
+    .about-text_wrapper {
+      width: 65%;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .about-text_header {
+        font-size: $main-font-size + 2;
+        line-height: 55px;
+        letter-spacing: -0.76px;
+
+        @include tablet-max {
+          font-size: $bigger-font-size + 2;
+        }
+      }
+
+      .about-text_paragraph {
+        font: normal normal normal 18px/32px Open Sans;
+        letter-spacing: -0.6px;
+
+        @include tablet-max {
+          font: normal normal normal 30px/54px Open Sans;
+        }
+      }
+    }
   }
 
   .about-image {
-    height: 50%;
+    height: 45%;
     width: 100%;
     background: $no-color url("../../assets/People.jpg") no-repeat center/cover;
+
+    @include notebook {
+      height: 100%;
+      width: 50%;
+    }
+  }
+
+  .decoration_image {
+    margin: 5px 0 10px 0;
+
+    @include tablet-min {
+      margin: 25px 0 40px 0;
+    }
   }
 }
