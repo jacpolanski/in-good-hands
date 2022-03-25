@@ -45,3 +45,91 @@
     }
   }
 }
+
+.easySteps-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .easySteps-text {
+    text-align: center;
+    font-size: $bigger-font-size + 2;
+    line-height: 55px;
+    letter-spacing: -0.76px;
+    margin-top: 20px;
+
+    @include notebook {
+      margin-top: 55px;
+    }
+  }
+
+  .decoration_image {
+    margin-bottom: 26px;
+  }
+
+  .easySteps-columns {
+    background-color: $color-light;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .easySteps-columns_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      @include notebook {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+      }
+
+      .easySteps-column:first-of-type {
+        padding-top: 30px;
+
+        @include notebook {
+          padding: 73px 0 80px 0;
+        }
+      }
+
+      .easySteps-column {
+        padding-bottom: 30px;
+        max-width: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include notebook {
+          padding: 73px 0 80px 0;
+        }
+      }
+
+      .easySteps-column_image {
+        width: 83px;
+        height: 83px;
+        margin-bottom: 8px;
+      }
+
+      .easySteps-column_head {
+        line-height: 14px;
+      }
+
+      .easySteps-column_line {
+        width: 70px;
+        height: 1px;
+        border-bottom: 1px solid #707070;
+        margin: 11px 0;
+      }
+
+      .easySteps-column_text {
+        font-size: $main-font-size -2;
+        line-height: 16px;
+      }
+    }
+  }
+}

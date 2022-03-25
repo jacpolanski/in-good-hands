@@ -1,4 +1,6 @@
 import React from "react";
+import Decoration from "../other/Decoration";
+import { Link } from "react-router-dom";
 
 function HomeHeader() {
   return (
@@ -9,10 +11,14 @@ function HomeHeader() {
           <span>Zacznij pomagać!</span>
           <span>Oddaj niechciane rzeczy w zaufane ręce</span>
         </div>
-        <div className="header-text_image" />
+        <Decoration />
         <div className="header-text_buttons">
-          <button className="button-big">oddaj rzeczy</button>
-          <button className="button-big">zorganizuj zbiórkę</button>
+          <Link to="/logowanie">
+            <button className="button-big">oddaj rzeczy</button>
+          </Link>
+          <Link to="/logowanie">
+            <button className="button-big">zorganizuj zbiórkę</button>
+          </Link>
         </div>
       </div>
     </section>
