@@ -1,0 +1,19 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-light;
+
+  .about-text {
+height: 50%;
+
+  }
+
+  .about-image {
+    height: 50%;
+    width: 100%;
+    background: $no-color url("../../assets/People.jpg") no-repeat center/cover;
+  }
+}
