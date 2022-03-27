@@ -1,7 +1,8 @@
 
 # in-good-hands
 > !!! IN PROGRESS  !!!
-> Give away your old stuff and let it serve for those who need it
+> Give away your old stuff and let it serve for those who need it.
+
 > Live demo [_here_](https://in-good-hands.vercel.app/)
 
 ## Table of Contents
