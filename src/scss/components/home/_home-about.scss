@@ -11,7 +11,7 @@
   }
 
   .about-text {
-    height: 55%;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,14 +48,13 @@
           font: normal normal normal 30px/54px Open Sans;
         }
       }
-
-      .about-text_signature {
-        margin-top: 40px;
-        align-self: flex-end;
-        width: 210px;
-        height: 150px;
-        background: $no-color url("../../assets/Signature.svg") no-repeat center/cover;
-      }
+    }
+    .about-text_signature {
+      margin-top: 40px;
+      align-self: flex-end;
+      width: 210px;
+      height: 150px;
+      background: $no-color url("../../assets/Signature.svg") no-repeat center/cover;
     }
   }
 
