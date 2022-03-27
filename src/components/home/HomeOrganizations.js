@@ -6,7 +6,7 @@ function HomeOrganizations() {
   const [entity, setEntity] = useState(1);
 
   return (
-    <div id="organizations" className="element organizations-wrapper">
+    <section id="organizations" className="element organizations-wrapper">
       <div className="organizations-text-wrapper">
         <div className="organizations-text_header">O nas</div>
         <Decoration />
@@ -30,7 +30,7 @@ function HomeOrganizations() {
       {entity === 1 && <Entity entity="Fundacja" entries={[0, 9]} />}
       {entity === 2 && <Entity entity="Organizacja" entries={[10, 16]} />}
       {entity === 3 && <Entity entity="Zbiórka" entries={[17, 20]} />}
-    </div>
+    </section>
   );
 }
 
