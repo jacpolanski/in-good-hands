@@ -21,6 +21,7 @@
 
 ## Technologies Used
 - React
+- React Router
 - HTML
 - SCSS
 - JavaScript
