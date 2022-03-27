@@ -41,3 +41,26 @@
     background-color: $no-color;
   }
 }
+
+.button-mid {
+  @extend .button;
+  font-weight: 300;
+  font-size: 24px;
+  border: 0.75px solid $color-dark;
+  width: 210px;
+  height: 80px;
+  margin: .622em;
+  background-color: rgba(240, 241, 241, 0.5);
+
+  &:hover {
+    background-color: rgba(240, 241, 241, .65);
+
+    @include notebook {
+      background-color: rgba(240, 241, 241, .5);
+    }
+  }
+
+  @include notebook {
+    background-color: $no-color;
+  }
+}

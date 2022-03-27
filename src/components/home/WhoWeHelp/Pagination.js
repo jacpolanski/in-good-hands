@@ -1,14 +1,14 @@
 import React from "react";
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
   return (
-    <nav>
+    <nav className={pageNumbers.length === 1 ? "hide" : ""}>
       <ul>
         {pageNumbers.map((number) => (
           <li key={number}>

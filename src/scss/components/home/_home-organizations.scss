@@ -1,0 +1,136 @@
+.organizations-wrapper {
+  padding: 30px 0;
+
+  .decoration_image {
+    margin: 25px 0;
+  }
+
+  @include notebook {
+    padding: 70px 0;
+  }
+
+  .organizations-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .organizations-text_header {
+    text-align: center;
+    font-size: $bigger-font-size + 2;
+    letter-spacing: -0.76px;
+    line-height: 55px;
+
+
+  }
+
+  .organizations-text_paragraph {
+    width: 95%;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+    text-align: center;
+
+    @include notebook {
+      width: 32%;
+    }
+  }
+
+  .buttons {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-max {
+      margin: 0 0 50px 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include notebook {
+      width: $notebook-width *0.9;
+    }
+
+
+    .entity-text_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+
+      padding: 34px 0;
+      font-family: $font-alt;
+      font-weight: 300;
+
+      @include notebook {
+        flex-direction: row;
+        text-align: left;
+      }
+
+
+      .entity-text_name {
+        font-size: 26px;
+        line-height: 31px;
+      }
+
+      .entity-text_description {
+        font-style: italic;
+        line-height: 22px;
+      }
+
+      .entity-text_items {
+        margin-top: 1rem;
+
+        @include notebook {
+          margin-top: 0;
+        }
+      }
+    }
+
+    & > ul li {
+      border-bottom: 1px solid #707070;
+    }
+
+    & > ul li:last-of-type {
+      border-bottom: none;
+    }
+
+    & > nav {
+      align-self: center;
+
+      ul {
+        display: flex;
+
+        li {
+          padding: 1rem 0.1rem;
+          border: 1px solid $no-color;
+
+          a {
+            padding: 1rem;
+          }
+        }
+
+        li:hover {
+          border: 1px solid #707070;
+        }
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

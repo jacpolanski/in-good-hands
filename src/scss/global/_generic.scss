@@ -22,9 +22,14 @@ body {
     margin: 0 auto;
   }
 
-  #about,
-  #contact,
-  #organizations {
+  #contact {
     height: 100vh;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
