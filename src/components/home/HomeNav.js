@@ -16,6 +16,26 @@ function HomeNav() {
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <div className="mobile-wrapper">
+              <li className="nav-item mobile">
+                <RoutLink
+                  to="/logowanie"
+                  className="nav-links small"
+                  onClick={closeMobileMenu}
+                >
+                  Zaloguj
+                </RoutLink>
+              </li>
+              <li className="nav-item mobile">
+                <RoutLink
+                  to="/rejestracja"
+                  className="nav-links small"
+                  onClick={closeMobileMenu}
+                >
+                  Załóż konto
+                </RoutLink>
+              </li>
+            </div>
             <li className="nav-item">
               <RoutLink to="/" className="nav-links" onClick={closeMobileMenu}>
                 Start

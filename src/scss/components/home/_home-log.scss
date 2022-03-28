@@ -1,8 +1,10 @@
 .home-log {
   margin-top: 2.556em;
   text-align: center;
+  display: none;
 
-  @include tablet-min {
+  @include tablet-max {
+    display: inherit;
     text-align: right;
   }
 }
