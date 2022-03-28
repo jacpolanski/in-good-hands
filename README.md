@@ -17,7 +17,7 @@
 
 
 ## General Information
-- Project created as personal Landing Page and virtual resume
+- Project created as additional project to Coders Lab bootcam on basis of [_mockup_](https://xd.adobe.com/spec/f11fc670-7af2-4502-4013-c1f66f8d3332-872e/grid/)
 
 
 ## Technologies Used
