@@ -1,6 +1,7 @@
 import React from "react";
 import Decoration from "../other/Decoration";
 import Form from "./contact/Form";
+import Footer from "./contact/Footer";
 
 function HomeHeader() {
   return (
@@ -10,6 +11,9 @@ function HomeHeader() {
         <Decoration />
         <Form />
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </section>
   );
 }

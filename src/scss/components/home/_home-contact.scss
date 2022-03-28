@@ -12,14 +12,14 @@
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
     z-index: 10;
 
-    @include tablet-max {
+    @include notebook {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
 
     }
   }
 
-  @include tablet-max {
-    background: $no-color url("../../assets/Background-Contact-Form.jpg") no-repeat (center left)/contain;
+  @include notebook {
+    background: $no-color url("../../assets/Background-Contact-Form.jpg") no-repeat (center left)/cover;
   }
 
   .contact-text {
@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet-max {
+    @include notebook {
       justify-content: center;
 
       width: 50vw;
@@ -60,7 +60,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
+    @include tablet-max {
+      width: 75%;
+    }
     .form {
       display: flex;
       flex-wrap: wrap;
@@ -69,7 +73,7 @@
       width: 80vw;
       padding: 0 25px;
 
-      @include tablet-max {
+      @include notebook {
         width: 100%;
       }
 

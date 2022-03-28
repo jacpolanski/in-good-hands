@@ -1,0 +1,27 @@
+.footer-wrapper {
+
+  .footer-text-wrapper {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    z-index: 1000;
+
+    @include tablet-max {
+      left: calc(50% - 150px);
+      width: 300px;
+    }
+  }
+
+  .footer-socials-wrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 5%;
+    text-align: right;
+    z-index: 1000;
+
+    @include tablet-max {
+      right: 8%;
+    }
+  }
+}
