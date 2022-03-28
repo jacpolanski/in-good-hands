@@ -15,13 +15,17 @@
 
   .footer-socials-wrapper {
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     right: 5%;
     text-align: right;
     z-index: 1000;
 
     @include tablet-max {
       right: 8%;
+    }
+
+    img:first-of-type {
+      margin-right: 1rem;
     }
   }
 }
