@@ -1,0 +1,165 @@
+.logIn-wrapper {
+  height: calc(100vh - 127px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logIn-text {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    @include tablet-max {
+      width: 60vw;
+    }
+
+    @include notebook {
+      width: 40vw;
+      justify-content: center;
+    }
+
+    .logIn-text_head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+      font-size: $bigger-font-size + 2;
+      letter-spacing: -0.76px;
+      line-height: 55px;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 15px;
+    background-color: $color-light;
+
+    @include notebook {
+      width: 100%;
+      align-items: center;
+    }
+
+    &-input {
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+
+      @include max-tablet {
+        align-items: center;
+      }
+
+      &.textarea {
+        margin-top: 1rem;
+      }
+
+      label {
+        justify-self: left;
+        font-size: $main-font-size - 2;
+      }
+    }
+
+    &-field-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include tablet-max {
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: row;
+      }
+
+      .logIn-field {
+        flex-grow: 1;
+      }
+    }
+
+    .button-mid {
+      width: 150px;
+      height: 50px;
+      font-size: $main-font-size;
+      font-weight: 300;
+      align-self: flex-end;
+      margin: 0;
+    }
+  }
+
+  .form-input {
+    width: 80vw;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $color-dark;
+    background-color: $no-color;
+    height: 40px;
+
+    @include tablet-max {
+      width: 40vw;
+    }
+
+    @include notebook {
+      width: 25vw;
+    }
+
+    &.text {
+      height: 120px;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $color-dark;
+    }
+
+    &::placeholder {
+      color: #3C3C3C26;
+      line-height: 22px;
+    }
+  }
+}
+
+.logIn-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @include tablet-max {
+    width: 65vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include notebook {
+    width: 57vw;
+  }
+
+  .button-mid {
+
+    width: 150px;
+    height: 50px;
+    font-size: $main-font-size;
+    font-weight: 300;
+    align-self: flex-end;
+    margin: 1rem;
+  }
+}
+
