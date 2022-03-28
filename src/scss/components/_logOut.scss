@@ -1,0 +1,60 @@
+.logOut-wrapper {
+  height: calc(100vh - 127px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logOut-text {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    @include tablet-max {
+      width: 60vw;
+    }
+
+    @include notebook {
+      width: 40vw;
+      justify-content: center;
+    }
+
+    .logOut-text_head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+      font-size: $bigger-font-size + 2;
+      letter-spacing: -0.76px;
+      line-height: 55px;
+    }
+  }
+
+  .logOut-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .button-mid {
+      width: 150px;
+      height: 50px;
+      font-size: $main-font-size;
+      font-weight: 300;
+      align-self: flex-end;
+    }
+  }
+
+  .decoration_image {
+    margin: 30px;
+  }
+}
+
+
