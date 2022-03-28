@@ -114,17 +114,15 @@
       ul {
         display: flex;
 
-        li {
-          padding: 1rem 0.1rem;
+        button {
+          padding: 1rem;
+          background-color: $no-color;
           border: 1px solid $no-color;
 
-          a {
-            padding: 1rem;
+          &:hover {
+            border: 1px solid #707070;
           }
-        }
 
-        li:hover {
-          border: 1px solid #707070;
         }
       }
     }

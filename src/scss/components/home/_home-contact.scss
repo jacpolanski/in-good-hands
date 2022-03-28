@@ -1,0 +1,158 @@
+.contact-wrapper {
+  height: 100vh;
+  position: relative;
+  background: $no-color url("../../assets/Background-Contact-Form.jpg") no-repeat (center right 40%)/cover;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    z-index: 10;
+
+    @include tablet-max {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
+
+    }
+  }
+
+  @include tablet-max {
+    background: $no-color url("../../assets/Background-Contact-Form.jpg") no-repeat (center left)/contain;
+  }
+
+  .contact-text {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-max {
+      justify-content: center;
+
+      width: 50vw;
+      left: 50%;
+    }
+
+    .contact-text_head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+      font-size: $bigger-font-size + 2;
+      letter-spacing: -0.76px;
+      line-height: 55px;
+    }
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      width: 80vw;
+      padding: 0 25px;
+
+      @include tablet-max {
+        width: 100%;
+      }
+
+      &-input {
+      }
+
+      &-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+
+        @include max-tablet {
+          align-items: center;
+        }
+
+        &:first-of-type {
+          padding-right: 0;
+
+          @include tablet-max {
+            padding-right: 16px;
+          }
+        }
+
+        &.textarea {
+          margin-top: 1rem;
+        }
+
+        label {
+          justify-self: left;
+          font-size: $main-font-size - 2;
+        }
+      }
+
+      &-field-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet-max {
+          justify-content: space-between;
+          align-items: stretch;
+          flex-direction: row;
+        }
+
+        .form-field {
+          flex-grow: 1;
+        }
+      }
+
+      .button-mid {
+        width: 150px;
+        height: 50px;
+        font-size: $main-font-size;
+        font-weight: 300;
+        align-self: flex-end;
+        margin: 0;
+      }
+    }
+
+    .form-input {
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $color-dark;
+      background-color: $no-color;
+      height: 40px;
+      margin: 5px 0 40px 0;
+
+      &.text {
+        height: 120px;
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $color-dark;
+      }
+
+      &::placeholder {
+        color: #3C3C3C26;
+        line-height: 22px;
+      }
+    }
+  }
+}
+

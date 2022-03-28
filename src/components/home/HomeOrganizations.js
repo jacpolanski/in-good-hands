@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Entity from "./WhoWeHelp/Entity";
+import Entity from "./whoWeHelp/Entity";
 import Decoration from "../other/Decoration";
 
 function HomeOrganizations() {
