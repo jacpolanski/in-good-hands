@@ -17,7 +17,7 @@ const Entity = ({ entity, entries }) => {
       .then((json) => {
         setItems(json.slice(entries[0], entries[1]));
       });
-  }, []);
+  }, [entries]);
 
   useEffect(() => {
     if (items.length !== 0) {

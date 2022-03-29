@@ -1,6 +1,4 @@
-import "./scss/main.scss";
 import { Routes, Route } from "react-router-dom";
-
 import HomeMain from "./components/HomeMain";
 import FormMain from "./components/FormMain";
 import LogIn from "./components/LogIn";
