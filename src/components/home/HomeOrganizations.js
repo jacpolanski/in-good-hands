@@ -11,13 +11,22 @@ function HomeOrganizations() {
         <div className="organizations-text_header">O nas</div>
         <Decoration />
         <div className="buttons">
-          <button className="button-mid" onClick={() => setEntity(1)}>
+          <button
+            className={entity === 1 ? "button-mid active" : "button-mid"}
+            onClick={() => setEntity(1)}
+          >
             Fundacjom
           </button>
-          <button className="button-mid" onClick={() => setEntity(2)}>
+          <button
+            className={entity === 2 ? "button-mid active" : "button-mid"}
+            onClick={() => setEntity(2)}
+          >
             Organizacjom pozarządowym
           </button>
-          <button className="button-mid" onClick={() => setEntity(3)}>
+          <button
+            className={entity === 3 ? "button-mid active" : "button-mid"}
+            onClick={() => setEntity(3)}
+          >
             Lokalnym zbiórkom
           </button>
         </div>

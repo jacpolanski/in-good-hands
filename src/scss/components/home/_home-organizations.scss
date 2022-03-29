@@ -50,6 +50,14 @@
       justify-content: space-between;
       align-items: center;
     }
+
+    .button-mid {
+      border: 1px solid $no-color;
+
+      &.active {
+        border: 1px solid $color-dark;
+      }
+    }
   }
 
   .container {
