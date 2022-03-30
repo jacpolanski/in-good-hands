@@ -8,15 +8,18 @@ function HomeNav() {
   const navigate = useNavigate();
 
   const handleClick = () => setClick(!click);
+
+  const scrollTarget = async () => {
+    await navigate("/");
+  };
+
   const closeMobileMenu = (target) => {
     setClick(false);
-    scrollTarget(target);
-  };
-  const scrollTarget = async (target) => {
-    if (target !== undefined) {
-      await navigate("/");
-      scroller.scrollTo(target, { smooth: true, duration: 700 });
-    }
+    scrollTarget().then(() => {
+      if (target !== "none") {
+        scroller.scrollTo(target, { smooth: true, duration: 700 });
+      }
+    });
   };
 
   return (
@@ -32,7 +35,7 @@ function HomeNav() {
                 <RoutLink
                   to="/logowanie"
                   className="nav-links small"
-                  onClick={() => closeMobileMenu()}
+                  onClick={() => closeMobileMenu("none")}
                 >
                   Zaloguj
                 </RoutLink>
@@ -41,7 +44,7 @@ function HomeNav() {
                 <RoutLink
                   to="/rejestracja"
                   className="nav-links small"
-                  onClick={() => closeMobileMenu()}
+                  onClick={() => closeMobileMenu("none")}
                 >
                   Załóż konto
                 </RoutLink>
@@ -51,7 +54,7 @@ function HomeNav() {
               <RoutLink
                 to="/"
                 className="nav-links"
-                onClick={() => closeMobileMenu()}
+                onClick={() => closeMobileMenu("none")}
               >
                 Start
               </RoutLink>
