@@ -58,6 +58,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: baseline;
+      position: relative;
 
       &:first-of-type {
         margin-bottom: 40px;
@@ -74,6 +75,17 @@
       label {
         justify-self: left;
         font-size: $main-font-size - 2;
+      }
+
+      .email-errors,
+      .password-errors {
+        text-align: left;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        text-wrap: revert;
+        font-size: $main-font-size / 1.5;
+        color: $color-error;
       }
     }
 
@@ -131,6 +143,10 @@
     &::placeholder {
       color: #3C3C3C26;
       line-height: 22px;
+    }
+
+    &.invalid {
+      border-bottom: 1px solid $color-error;
     }
   }
 }

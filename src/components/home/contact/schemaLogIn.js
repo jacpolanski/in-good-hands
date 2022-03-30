@@ -1,13 +1,6 @@
 import Joi from "joi";
 
 export const schemaLogIn = Joi.object({
-  name: Joi.string().alphanum().min(3).max(30).required().trim(true).messages({
-    "string.base": `Imię powinno być jednym wyrazem`,
-    "string.empty": `Imię nie może być puste`,
-    "string.min": `Imię musi zawierać minimum {#limit} znaków`,
-    "string.max": `Imię musi zawierać maksimum {#limit} znaków`,
-    "any.required": `Imię jest polem wymaganym`,
-  }),
   email: Joi.string()
     .email({
       minDomainSegments: 2,
@@ -18,11 +11,12 @@ export const schemaLogIn = Joi.object({
     .messages({
       "string.email": `Proszę wpisać poprawny adres email`,
       "string.empty": `Email nie może być pusty`,
-      "any.required": `Email jest polem wymaganym`,
+      "any.required": `Podaj email`,
     }),
-  message: Joi.string().min(120).required().trim(true).messages({
-    "string.min": `Wiadomość powinna zawierać minimum {#limit} znaków`,
-    "string.empty": `Wiadomość nie może być pusta`,
-    "any.required": `Wiadomość jest polem wymaganym`,
+
+  password: Joi.string().min(6).required().messages({
+    "string.min": `Hasło powinno zawierać minimum {#limit} znaków`,
+    "string.empty": `Hasło nie może być puste`,
+    "any.required": `Podaj hasło`,
   }),
 });
