@@ -50,7 +50,7 @@ function LogIn() {
   return (
     <section className="logIn-wrapper" id="LogIn">
       <div className="logIn-text">
-        <div className="logIn-text_head">Skontaktuj się z nami</div>
+        <div className="logIn-text_head">Zaloguj się</div>
         <Decoration />
         <form className="form" id="logInForm" onSubmit={handleSubmit}>
           <div className="form-field">
