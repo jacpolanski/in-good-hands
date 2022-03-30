@@ -45,7 +45,6 @@ function LogIn() {
         email: errors.filter((error) => error.context.key === "email"),
         password: errors.filter((error) => error.context.key === "password"),
       });
-    console.log(errorsMsgs);
   }, [errors]);
 
   return (
@@ -53,7 +52,7 @@ function LogIn() {
       <div className="logIn-text">
         <div className="logIn-text_head">Skontaktuj się z nami</div>
         <Decoration />
-        <form className="form" id="logIn" onSubmit={handleSubmit}>
+        <form className="form" id="logInForm" onSubmit={handleSubmit}>
           <div className="form-field">
             <label className="form-label" htmlFor="email">
               Email
@@ -109,7 +108,7 @@ function LogIn() {
           <Link to="/rejestracja">
             <button className="button-mid">Załóż konto</button>
           </Link>
-          <button className="button-mid" form="logIn" type="submit">
+          <button className="button-mid" form="logInForm" type="submit">
             Zaloguj się
           </button>
         </div>
