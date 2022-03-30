@@ -8,7 +8,7 @@ import ScrollArrow from "./other/ScrollArrow";
 
 function HomeMain() {
   return (
-    <main>
+    <main id="homeMain">
       <ScrollArrow />
       <HomeHeader />
       <HomeReason />

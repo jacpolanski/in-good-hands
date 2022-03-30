@@ -1,12 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { scroller } from "react-scroll";
 import { Link as RoutLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function HomeNav() {
   const [click, setClick] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const closeMobileMenu = (target) => {
+    setClick(false);
+    scrollTarget(target);
+  };
+  const scrollTarget = async (target) => {
+    if (target !== undefined) {
+      await navigate("/");
+      scroller.scrollTo(target, { smooth: true, duration: 700 });
+    }
+  };
 
   return (
     <div className="home-nav">
@@ -21,7 +32,7 @@ function HomeNav() {
                 <RoutLink
                   to="/logowanie"
                   className="nav-links small"
-                  onClick={closeMobileMenu}
+                  onClick={() => closeMobileMenu()}
                 >
                   Zaloguj
                 </RoutLink>
@@ -30,68 +41,56 @@ function HomeNav() {
                 <RoutLink
                   to="/rejestracja"
                   className="nav-links small"
-                  onClick={closeMobileMenu}
+                  onClick={() => closeMobileMenu()}
                 >
                   Załóż konto
                 </RoutLink>
               </li>
             </div>
             <li className="nav-item">
-              <RoutLink to="/" className="nav-links" onClick={closeMobileMenu}>
+              <RoutLink
+                to="/"
+                className="nav-links"
+                onClick={() => closeMobileMenu()}
+              >
                 Start
               </RoutLink>
             </li>
             <li className="nav-item">
-              <Link
-                activeClass="active"
+              <RoutLink
                 className="nav-links"
-                to="reason"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMobileMenu}
+                to="/"
+                onClick={() => closeMobileMenu("reason")}
               >
                 O co chodzi?
-              </Link>
+              </RoutLink>
             </li>
             <li className="nav-item">
-              <Link
-                activeClass="active"
+              <RoutLink
                 className="nav-links"
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMobileMenu}
+                to="/"
+                onClick={() => closeMobileMenu("about")}
               >
                 O nas
-              </Link>
+              </RoutLink>
             </li>
             <li className="nav-item">
-              <Link
-                activeClass="active"
+              <RoutLink
                 className="nav-links"
-                to="organizations"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMobileMenu}
+                to="/"
+                onClick={() => closeMobileMenu("organizations")}
               >
                 Fundacja i Organizacje
-              </Link>
+              </RoutLink>
             </li>
             <li className="nav-item">
-              <Link
-                activeClass="active"
+              <RoutLink
                 className="nav-links"
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMobileMenu}
+                to="/"
+                onClick={() => closeMobileMenu("contact")}
               >
                 Kontakt
-              </Link>
+              </RoutLink>
             </li>
           </ul>
         </nav>
