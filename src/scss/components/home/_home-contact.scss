@@ -139,7 +139,7 @@
           left: 0;
           text-wrap: revert;
           font-size: $main-font-size / 1.5;
-          color: #881c0b;
+          color: $color-error;
         }
       }
 
@@ -180,6 +180,10 @@
 
       &.text {
         height: 120px;
+      }
+
+      &.invalid {
+        border-bottom: 1px solid $color-error;
       }
 
       &:focus {

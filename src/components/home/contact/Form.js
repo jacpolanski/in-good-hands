@@ -67,7 +67,11 @@ function Form({ setIsSent }) {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="form-input"
+              className={
+                errorsMsgs.message.length !== 0
+                  ? "form-input invalid"
+                  : "form-input"
+              }
               id="name"
               placeholder="Krzysztof"
             />
@@ -89,7 +93,11 @@ function Form({ setIsSent }) {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="form-input"
+              className={
+                errorsMsgs.message.length !== 0
+                  ? "form-input invalid"
+                  : "form-input"
+              }
               id="email"
               placeholder="abc@xyz.pl"
             />
@@ -112,7 +120,11 @@ function Form({ setIsSent }) {
             name="message"
             value={form.message}
             onChange={handleChange}
-            className="form-input text"
+            className={
+              errorsMsgs.message.length !== 0
+                ? "form-input text invalid"
+                : "form-input text"
+            }
             id="message"
             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           />
