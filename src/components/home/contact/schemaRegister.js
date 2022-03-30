@@ -23,8 +23,8 @@ export const schemaRegister = Joi.object({
   passwordRepeat: Joi.string()
     .min(6)
     .required()
-    .equal(Joi.ref("password"))
     .empty(``)
+    .valid(Joi.ref("password"))
     .messages({
       "string.min": `Hasło powinno zawierać minimum {#limit} znaków`,
       "string.empty": `Hasło nie może być puste`,
