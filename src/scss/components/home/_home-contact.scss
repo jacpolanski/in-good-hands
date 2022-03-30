@@ -182,13 +182,21 @@
         height: 120px;
       }
 
-      &.invalid {
+      &.name-invalid,
+      &.email-invalid,
+      &.message-invalid {
         border-bottom: 1px solid $color-error;
       }
 
       &:focus {
         outline: none;
         border-bottom: 2px solid $color-dark;
+
+        &.name-invalid,
+        &.email-invalid,
+        &.message-invalid {
+          border-bottom: 2px solid $color-error;
+        }
       }
 
       &::placeholder {

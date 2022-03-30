@@ -22,6 +22,7 @@ function Form({ setIsSent }) {
 
   const handleSubmit = (e) => {
     setIsSent(false);
+
     e.preventDefault();
 
     const { error } = schemaContact.validate(form, {
@@ -45,6 +46,12 @@ function Form({ setIsSent }) {
   };
 
   useEffect(() => {
+    setErrorMsgs({
+      name: [],
+      email: [],
+      message: [],
+    });
+
     errors.length !== 0 &&
       setErrorMsgs({
         name: errors.filter((error) => error.context.key === "name"),
@@ -68,8 +75,8 @@ function Form({ setIsSent }) {
               value={form.name}
               onChange={handleChange}
               className={
-                errorsMsgs.message.length !== 0
-                  ? "form-input invalid"
+                errorsMsgs.name.length !== 0
+                  ? "form-input name-invalid"
                   : "form-input"
               }
               id="name"
@@ -94,8 +101,8 @@ function Form({ setIsSent }) {
               value={form.email}
               onChange={handleChange}
               className={
-                errorsMsgs.message.length !== 0
-                  ? "form-input invalid"
+                errorsMsgs.email.length !== 0
+                  ? "form-input email-invalid"
                   : "form-input"
               }
               id="email"
@@ -122,7 +129,7 @@ function Form({ setIsSent }) {
             onChange={handleChange}
             className={
               errorsMsgs.message.length !== 0
-                ? "form-input text invalid"
+                ? "form-input text message-invalid"
                 : "form-input text"
             }
             id="message"

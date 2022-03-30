@@ -151,6 +151,10 @@
     &:focus {
       outline: none;
       border-bottom: 2px solid $color-dark;
+
+      &.invalid {
+        border-bottom: 2px solid $color-error;
+      }
     }
 
     &::placeholder {
@@ -166,7 +170,7 @@
 
 .register-button-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   padding: 1rem;
