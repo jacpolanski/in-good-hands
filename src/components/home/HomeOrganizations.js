@@ -8,7 +8,7 @@ function HomeOrganizations() {
   return (
     <section id="organizations" className="element organizations-wrapper">
       <div className="organizations-text-wrapper">
-        <div className="organizations-text_header">O nas</div>
+        <div className="organizations-text_header">Komu pomagamy?</div>
         <Decoration />
         <div className="buttons">
           <button
