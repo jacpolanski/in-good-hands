@@ -1,6 +1,6 @@
 
 # in-good-hands
-> !!! In progress - but take a peak, it looks not bad already !!!
+> !!! In progress - but take a peek, it looks not bad already !!!
 > Give away your old stuff and let it serve for those who need it. Don't waste your space with things you will newer use and give them second life "in-good-hands" of ones who will really need them.
 
 > Live demo [_here_](https://in-good-hands.vercel.app/)
