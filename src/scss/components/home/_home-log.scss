@@ -7,4 +7,9 @@
     display: inherit;
     text-align: right;
   }
+
+  span {
+    color: $color-gray;
+    font-size: $main-font-size - 4;
+  }
 }
