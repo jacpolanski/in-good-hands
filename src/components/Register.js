@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Decoration from "./other/Decoration";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import uniqid from "uniqid";
 import { schemaRegister } from "./home/contact/schemaRegister";
+import { useAuth } from "./other/AuthContext";
+import { auth } from "../firebase";
 
 function Register() {
+  const navigate = useNavigate();
+  const { signup, currentUser } = useAuth();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -26,7 +30,7 @@ function Register() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { error } = schemaRegister.validate(form, {
@@ -42,7 +46,12 @@ function Register() {
           passwordRepeat: [],
         });
 
-    console.log(errors);
+    if (error === undefined) {
+      await signup(auth, form.email, form.password);
+      navigate("/logowanie");
+    }
+    console.log(currentUser);
+    // currentUser !== undefined && navigate("/login");
   };
 
   useEffect(() => {

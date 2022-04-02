@@ -35,7 +35,7 @@ function HomeNav() {
                 <RoutLink
                   to="/logowanie"
                   className="nav-links small"
-                  onClick={() => closeMobileMenu("none")}
+                  onClick={() => closeMobileMenu("`none`")}
                 >
                   Zaloguj
                 </RoutLink>
