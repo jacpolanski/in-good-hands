@@ -1,7 +1,7 @@
 
 # in-good-hands
-> !!! IN PROGRESS  !!!
-> Give away your old stuff and let it serve for those who need it.
+> !!! In progress - but take a peek, it looks not bad already !!!
+> Give away your old stuff and let it serve for those who need it. Don't waste your space with things you will newer use and give them second life "in-good-hands" of ones who will really need them.
 
 > Live demo [_here_](https://in-good-hands.vercel.app/)
 
@@ -23,6 +23,7 @@
 ## Technologies Used
 - React
 - React Router
+- React Scroll
 - HTML
 - SCSS
 - JavaScript
@@ -46,7 +47,9 @@ Project is: _in progress_.
 
 
 ## Room for Improvement
-I'm still working on it :)
+- LogIn / LogOut features
+- form assisting ordering delivery of given goods
+- database connection
 
 ## Contact
 Created by [_jac.polanski_](https://www.linkedin.com/in/polanski-jacek/) - feel free to contact me!
