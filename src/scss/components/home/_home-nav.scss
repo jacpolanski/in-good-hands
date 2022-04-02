@@ -29,12 +29,21 @@
     }
   }
 
+  .mobile-wrapper.logged {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .mobile-wrapper {
+    width: 100%;
     margin-top: 80px;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
+
   .nav-links {
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -58,7 +67,7 @@
     display: none;
   }
 
-  @include max-tablet{
+  @include max-tablet {
     .nav-menu {
       display: flex;
       flex-direction: column;
