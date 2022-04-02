@@ -15,8 +15,12 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
 
-  const signup = (auth, email, password) => {
+  const signUp = (auth, email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  const signIn = (auth, email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   useEffect(() => {
@@ -29,7 +33,8 @@ export function AuthProvider({ children }) {
 
   const value = {
     currentUser,
-    signup,
+    signUp,
+    signIn,
   };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

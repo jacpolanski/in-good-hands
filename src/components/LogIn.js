@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Decoration from "./other/Decoration";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import uniqid from "uniqid";
 import { schemaLogIn } from "./home/contact/schemaLogIn";
+import { useAuth } from "./other/AuthContext";
+import { auth } from "../firebase";
 
 function LogIn() {
+  const navigate = useNavigate();
+  const { signIn, currentUser } = useAuth();
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState([]);
   const [errorsMsgs, setErrorMsgs] = useState({
@@ -21,7 +25,7 @@ function LogIn() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { error } = schemaLogIn.validate(form, {
@@ -36,7 +40,12 @@ function LogIn() {
           password: [],
         });
 
-    console.log(errors);
+    if (error === undefined) {
+      await signIn(auth, form.email, form.password);
+      navigate("/");
+    }
+
+    console.log(currentUser);
   };
 
   useEffect(() => {

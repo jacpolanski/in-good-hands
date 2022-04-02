@@ -8,7 +8,7 @@ import { auth } from "../firebase";
 
 function Register() {
   const navigate = useNavigate();
-  const { signup, currentUser } = useAuth();
+  const { signUp, currentUser } = useAuth();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -47,7 +47,7 @@ function Register() {
         });
 
     if (error === undefined) {
-      await signup(auth, form.email, form.password);
+      await signUp(auth, form.email, form.password);
       navigate("/logowanie");
     }
     console.log(currentUser);
