@@ -24,6 +24,8 @@
 - React
 - React Router
 - React Scroll
+- React Context
+- Firebase authentication
 - HTML
 - SCSS
 - JavaScript
