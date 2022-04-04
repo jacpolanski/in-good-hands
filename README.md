@@ -31,7 +31,21 @@
 
 ## Screenshots
 
-[//]: # (![1]&#40;./screenshots/1.png&#41;)
+![1](./screenshot/1.png)
+![1](./screenshot/2.png)
+![1](./screenshot/3.png)
+![1](./screenshot/4.png)
+![1](./screenshot/5.png)
+![1](./screenshot/6.png)
+![1](./screenshot/7.png)
+![1](./screenshot/8.png)
+![1](./screenshot/9.png)
+![1](./screenshot/9a.png)
+![1](./screenshot/10.png)
+![1](./screenshot/11.png)
+![1](./screenshot/12.png)
+![1](./screenshot/13.png)
+![1](./screenshot/14.png)
 
 
 ## Setup
@@ -47,7 +61,7 @@ Project is: _in progress_.
 
 
 ## Room for Improvement
-- LogIn / LogOut features
+- ~~LogIn / LogOut features~~ DONE
 - form assisting ordering delivery of given goods
 - database connection
 
